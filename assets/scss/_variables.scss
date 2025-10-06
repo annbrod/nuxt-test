@@ -1,0 +1,30 @@
+// Media Queries
+$tablet: 768px;
+$desktop-min: 1024px;
+$desktop: 1024px;
+$desktop-big: 1440px;
+
+// Fonts
+$font-base: "Inter", sans-serif;
+
+//Animations
+$animation-duration: 0.3s;
+
+// Colors
+$color-primary: #93ad8b;
+$color-secondary: #72ae62;
+$color-dark: #214118;
+$color-accent: #b4a1cc;
+$color-white: #fff;
+$color-black: #2e2d2d;
+$color-gray: #ccc;
+$color-gray-light: #f0f0f0;
+$color-error: #c41717;
+$color-background: #f9f9f9;
+
+//container
+$container-padding: 0 16px;
+
+@media (min-width: $tablet) {
+  $container-padding: 0 24px;
+}

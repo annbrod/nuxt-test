@@ -1,0 +1,83 @@
+@import "./fonts.scss";
+
+html {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  border: none;
+}
+
+body {
+  font-family: $font-base;
+  text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  -webkit-overflow-scrolling: touch;
+  text-rendering: optimizeLegibility;
+  background-color: $color-background;
+  overscroll-behavior: none;
+  box-sizing: border-box;
+  user-select: none;
+  padding: 0;
+  margin: 0;
+
+  min-width: 320px;
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+    overscroll-behavior: none;
+  }
+}
+
+.error-text {
+  color: $color-error;
+  margin-top: -4px;
+}
+
+.container {
+  @include container();
+}
+
+.loading {
+  position: relative;
+  overflow: hidden;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $color-gray-light;
+    z-index: 1;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 70%;
+    height: 100%;
+    background: linear-gradient(90deg, lightgray 0%, white 50%, lightgray 100%);
+    z-index: 2;
+    animation-name: loading;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+  }
+
+  @keyframes loading {
+    0% {
+      left: -100%;
+    }
+
+    100% {
+      left: 100%;
+    }
+  }
+}

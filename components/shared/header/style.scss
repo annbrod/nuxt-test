@@ -1,0 +1,40 @@
+.header {
+  padding: 12px 0;
+  border-bottom: 1px solid rgba($color: $color-black, $alpha: 0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: $color-background;
+  z-index: 10;
+
+  &__inner {
+    display: flex;
+    align-items: center;
+  }
+
+  &__buttons {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  &__count {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4px;
+    background-color: $color-accent;
+    color: $color-white;
+    border-radius: 50%;
+    font-size: 10px;
+    line-height: 10px;
+
+    position: absolute;
+    top: -3px;
+    right: -3px;
+
+    min-width: 18px;
+  }
+}
