@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import ProductCard from '~/components/shared/product-card/index.vue'
+import ProductCardCart from '~/components/shared/product-card/cart/index.vue'
 import ProductCardSkeleton from '~/components/shared/product-card/skeleton.vue'
 
 interface Props {
@@ -19,10 +19,10 @@ const store = useStore(['catalog']);
 
     <div class="product-list">
         <template v-if="isLoading">
-            <ProductCardSkeleton v-for="card in 3" :key="card.id" :cardClass="cardClass"/> 
+            <ProductCardSkeleton v-for="card, idx in 3" :key="idx" :cardClass="cardClass"/> 
         </template>
         <template v-else>
-            <ProductCard v-for="card in cards" :card="card" :key="card.id" :cardClass="cardClass"/> 
+            <ProductCardCart v-for="card in cards" :card="card" :key="card.id" :cardClass="cardClass"/> 
         </template>
     </div>
 

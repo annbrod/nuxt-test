@@ -4,7 +4,7 @@ import Favorites from '~/components/modules/favorites/index.vue'
 </script>
 
 <template>
-  <Favorites/>
+  <Favorites :isInner="false"/>
 
 </template>
 

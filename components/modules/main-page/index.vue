@@ -22,12 +22,16 @@ async function logout() {
         }}</b>
       </h1>
     </div>
-
+    <div v-if="!store.auth.role">
+      <h1 class="home__text">Вы не авторизованы.</h1>
+    </div>
     <div class="home__buttons">
       <UIButton v-if="store.auth.role" type="button" @click="logout">
         Выйти
       </UIButton>
-
+      <UIButton v-if="!store.auth.role" :type="ELinkTypes.NUXTLINK" to="/auth">
+        Войдите
+      </UIButton>
       <UIButton :type="ELinkTypes.NUXTLINK" to="/catalog"> В каталог </UIButton>
     </div>
   </div>

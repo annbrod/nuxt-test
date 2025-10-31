@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import ProductList from "~/components/shared/product-list/index.vue";
+import ProductListCart from "~/components/modules/product-list-cart/index.vue";
 
 interface Props {
   isInner: boolean;
@@ -14,7 +14,7 @@ const {products, isLoading} = storeToRefs(store.cart);
 <template>
   <div class="cart">
     <h1>Корзина</h1>
-    <ProductList :cards="products" :isLoading="isLoading" />
+    <ProductListCart :cards="products" :isLoading="isLoading" />
   </div>
 </template>
 

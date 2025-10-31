@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import ProductList from "~/components/shared/product-list/index.vue";
+import ProductList from "~/components/modules/product-list/index.vue";
 
 interface Props {
   isInner: boolean;

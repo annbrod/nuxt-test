@@ -18,7 +18,7 @@ defineProps<Props>()
 
     <div class="categories">
         <template v-if="isLoading">
-            <CategoryCardSkeleton v-for="card in 3" :key="card.id" :cardClass="cardClass"/> 
+            <CategoryCardSkeleton v-for="card, idx in 3" :key="idx" :cardClass="cardClass"/> 
         </template>
         <template v-else>
             <CategoryCard v-for="card in cards" :card="card" :key="card.id" :cardClass="cardClass"/> 

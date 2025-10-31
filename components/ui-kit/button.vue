@@ -73,6 +73,11 @@ withDefaults(defineProps<Partial<Props>>(), {
     width: 100%;
   }
 
+  &--card-counter {
+    z-index: 2;
+    min-height: 36px;
+  }
+
   &--input {
     background-color: transparent;
     color: $color-dark;
@@ -84,9 +89,6 @@ withDefaults(defineProps<Partial<Props>>(), {
   }
 
   &--favorite {
-    position: absolute;
-    right: 20px;
-    top: 20px;
     font-size: 22px;
     line-height: 1;
     padding: 4px;

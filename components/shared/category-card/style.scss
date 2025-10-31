@@ -12,6 +12,10 @@
   justify-content: flex-end;
   gap: 16px;
 
+  &.loading {
+    min-height: 158px;
+  }
+
   &__title {
     margin: 0;
     color: $color-black;

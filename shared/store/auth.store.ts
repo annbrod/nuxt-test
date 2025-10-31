@@ -1,15 +1,16 @@
+
 interface IAuthStore {
     login: string,
     password: string
 }
 
 interface IUserStore {
-    role: TRoles | null
+    role?: Roles | null
 }
 
 export const useAuthStore = defineStore('auth', {
     state: (): IUserStore => ({
-        role: (useCookie('USER_ROLE').value) as TRoles,
+        role: (useCookie('USER_ROLE').value) as Roles,
       }),
     getters: {
         isAuth: state => !!state.role

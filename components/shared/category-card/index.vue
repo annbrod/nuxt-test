@@ -13,7 +13,7 @@ defineProps<Props>()
 
     <NuxtLink class="category-card" :class="cardClass" :to="card.url" :title="card.title">
         <h3 class="category-card__title">{{card.title}}</h3>
-        <UIPicture :="card.img" alt  class="picture--category-card"/>
+        <UIPicture :="card.img" alt=" "  class="picture--category-card"/>
     </NuxtLink>
 
 </template>

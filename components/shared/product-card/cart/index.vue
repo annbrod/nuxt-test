@@ -1,5 +1,7 @@
 <script setup lang="ts">
 import {useProductCard} from "@/composables/product-card";
+const store = useStore(["favorites", "cart"]);
+// const { cart } = storeToRefs(store.cart)
 
 interface Props {
   card: IProductCard;
@@ -17,6 +19,14 @@ const {
   updateCartMore,
   updateCartLess,
 } = useProductCard(props.card);
+
+async function deleteFromCart() {
+  isInCart.value = false;
+  await store.cart.deleteCartItem({
+    id: +props.card.id,
+    quantity: quantity.value,
+  });
+}
 </script>
 
 <template>
@@ -51,10 +61,18 @@ const {
         <i-heart v-if="!isFavorite" class="nuxt-icon--heart" />
         <i-heart-fill v-else class="nuxt-icon--heart" />
       </UIButton>
+      <UIButton
+        @click="deleteFromCart"
+        type="button"
+        class="button--icon button--favorite button--cart"
+        aria-label="Удалить"
+      >
+        <i-trash class="nuxt-icon--trash" />
+      </UIButton>
     </div>
   </div>
 </template>
 
-<style lang="scss">
-@import "./style.scss";
+<style lang="scss" scoped>
+@import url("../style.scss");
 </style>

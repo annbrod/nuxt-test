@@ -69,7 +69,7 @@ export default defineEventHandler(async () => {
           },
           url: "/catalog/item/1",
           price: "3300 Р",
-          quantity: 0,
+          quantity: 1,
         },
       ],
     } satisfies IGetCatalogR;

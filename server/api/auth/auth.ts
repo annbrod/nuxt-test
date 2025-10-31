@@ -1,3 +1,5 @@
+import { Roles } from "~/shared/types/roles";
+
 export default defineEventHandler(async (event) => {
     
   interface IAuthBody {
@@ -31,12 +33,12 @@ export default defineEventHandler(async (event) => {
     })
   }
 
-  if (login === 'admin') {
+  if (login === Roles.Admin) {
     return {
       role: 'admin',
       message: 'Авторизация успешна',
     };
-  } else if (login === 'user') {
+  } else if (login === Roles.User) {
     return {
       role: 'user',
       message: 'Авторизация успешна',

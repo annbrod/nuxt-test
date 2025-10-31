@@ -4,7 +4,7 @@ import Cart from '~/components/modules/cart/index.vue'
 </script>
 
 <template>
-  <Cart/>
+  <Cart :isInner="false"/>
 
 </template>
 

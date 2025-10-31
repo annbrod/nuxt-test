@@ -11,8 +11,8 @@ const { $viewport } = useNuxtApp()
         class="logo"
     >
     <picture class="logo__picture">
-        <img v-if="$viewport.isLessThan('desktop')" src="/images/logo/mobile.svg" alt width="40" height="40">
-        <img v-else src="/images/logo/desktop.svg" alt width="173" height="42">
+        <img v-if="$viewport.isLessThan('desktop')" src="/images/logo/mobile.svg" alt='' width="40" height="40">
+        <img v-else src="/images/logo/desktop.svg" alt='' width="173" height="42">
     </picture>
   </NuxtLink>
 </template>

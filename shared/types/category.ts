@@ -1,4 +1,4 @@
-import { IImage } from '~/shared/types'
+import { type IImage } from './constant/image'
 
 export interface ICategory {
     title: string,

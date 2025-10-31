@@ -29,7 +29,7 @@ function getLess() {
 <template>
   <UIButton
     v-if="!isInCart"
-    class="button button--full-width"
+    class="button button--full-width button--card-counter"
     type="button"
     @click="addToCart"
   >
@@ -68,6 +68,8 @@ function getLess() {
   align-items: center;
   justify-content: center;
   gap: 12px;
+  z-index: 2;
+  min-height: 36px;
 
   &__input {
     text-align: center;
@@ -75,6 +77,10 @@ function getLess() {
     border: 1px solid $color-black;
     border-radius: 12px;
     height: 32px;
+  }
+
+  &--detail {
+    justify-content: right;
   }
 }
 </style>

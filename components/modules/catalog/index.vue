@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import Categories from "./ui/categories/index.vue";
-import ProductList from "~/components/shared/product-list/index.vue";
+import ProductList from "~/components/modules/product-list/index.vue";
 import Breadcrumbs from "~/components/shared/breadcrumbs/index.vue";
 
 interface Props {
