@@ -17,6 +17,12 @@ function method(instance: Instance) {
         body: payload,
       });
     },
+
+    clearCart() {
+      return instance<IGetCartR>(`/api/cart/clear/`, {
+        method: "POST",
+      });
+    },
   };
 }
 

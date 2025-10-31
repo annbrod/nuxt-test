@@ -20,7 +20,7 @@ export function useProductCard(card: IProductCard) {
   async function updateCart() {
     isInCart.value = true;
     quantity.value++;
-    await store.cart.updateСart({id: +card.id, quantity: quantity.value});
+    await store.cart.addInCart({id: +card.id, quantity: quantity.value});
   }
 
   async function updateCartMore() {

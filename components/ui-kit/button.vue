@@ -57,6 +57,7 @@ withDefaults(defineProps<Partial<Props>>(), {
   transition:
     background-color $animation-duration ease,
     color $animation-duration ease,
+    border-color $animation-duration ease,
     transform $animation-duration ease;
   text-decoration: none;
 
@@ -66,6 +67,7 @@ withDefaults(defineProps<Partial<Props>>(), {
   @media (hover: hover) {
     &:hover {
       background-color: $color-secondary;
+      color: white;
     }
   }
 
@@ -94,6 +96,12 @@ withDefaults(defineProps<Partial<Props>>(), {
     padding: 4px;
     &.added {
       color: $color-error;
+
+      @media (hover: hover) {
+        &:hover {
+          color: $color-error;
+        }
+      }
     }
   }
 
@@ -106,6 +114,7 @@ withDefaults(defineProps<Partial<Props>>(), {
         background-color: $color-white;
         transform: scale(1.1);
         opacity: 1;
+        color: $color-black;
       }
     }
   }
@@ -121,6 +130,12 @@ withDefaults(defineProps<Partial<Props>>(), {
 
   &--count {
     position: relative;
+  }
+
+  &--reverse {
+    background: none;
+    color: $color-primary;
+    border: 1px solid $color-primary;
   }
 }
 </style>

@@ -1,9 +1,9 @@
 //
 export interface IGetCartR {
-    products: IProductCard[]
+  products: IProductCard[];
 }
 
 export interface IUpdateCartR {
-    id: number,
-    quantity: number
+  id: number;
+  quantity: number;
 }
