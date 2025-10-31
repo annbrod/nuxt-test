@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import ProductCardCart from "~/components/shared/product-card/cart/index.vue";
 import ProductCardSkeleton from "~/components/shared/product-card/skeleton.vue";
-import EmptyState from "~/components/shared/empty-state/index.vue";
 
 interface Props {
   cards?: IProductCard[];
@@ -10,8 +9,6 @@ interface Props {
 }
 
 const props = defineProps<Props>();
-
-const store = useStore(["catalog"]);
 </script>
 
 <template>
@@ -31,9 +28,6 @@ const store = useStore(["catalog"]);
         :key="card.id"
         :cardClass="cardClass"
       />
-    </template>
-    <template v-if="!isLoading && !cards?.length">
-      <EmptyState title="В корзине ничего нет" />
     </template>
   </div>
 </template>
